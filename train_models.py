@@ -5,17 +5,14 @@ from sklearn.tree import DecisionTreeClassifier
 def train_models(X_train, X_train_scaled, y_train):
     models = {}
 
-    # Logistic Regression
     lr = LogisticRegression()
     lr.fit(X_train_scaled, y_train)
     models["Logistic Regression"] = lr
 
-    # KNN
     knn = KNeighborsClassifier(n_neighbors=5)
     knn.fit(X_train_scaled, y_train)
     models["KNN"] = knn
 
-    # Decision Tree
     dt = DecisionTreeClassifier(max_depth=5)
     dt.fit(X_train, y_train)
     models["Decision Tree"] = dt
