@@ -7,4 +7,4 @@ def predict_diabetes(model, scaler, input_data):
     prediction = model.predict(input_data) 
 
     return "Diabetic Risk" if prediction[0] == 1 else "No Risk"
-bluublbubuubjduddkskk
+
