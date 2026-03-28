@@ -2,7 +2,7 @@ from sklearn.metrics import accuracy_score, classification_report
 
 def evaluate_models(models, X_test, X_test_scaled, y_test):
     results = {}
-
+    
     with open("results.txt", "w") as f:
         for name, model in models.items():
             if name == "Decision Tree":
