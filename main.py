@@ -17,7 +17,6 @@ from src.visualization import (
     feature_importance,
     pca_visualization
 )
-
 from src.predict import predict_diabetes
 
 # ------------------------------
