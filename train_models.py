@@ -1,6 +1,6 @@
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier #hehehehehehehe
 
 def train_models(X_train, X_train_scaled, y_train):
     models = {}
