@@ -3,7 +3,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier 
 
 def train_models(X_train, X_train_scaled, y_train):
-    models = {}
+    models = {} tavishisshsisshsishs
 
     lr = LogisticRegression()
     lr.fit(X_train_scaled, y_train)
