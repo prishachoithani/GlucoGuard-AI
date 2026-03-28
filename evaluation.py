@@ -9,7 +9,7 @@ def evaluate_models(models, X_test, X_test_scaled, y_test):
                 y_pred = model.predict(X_test)
             else:
                 y_pred = model.predict(X_test_scaled)
-
+                
             acc = accuracy_score(y_test, y_pred)
             results[name] = acc
 
