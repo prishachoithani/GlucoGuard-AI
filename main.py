@@ -24,7 +24,7 @@ from src.predict import predict_diabetes
 # Fix dataset path automatically
 # ------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-data_path = os.path.join(BASE_DIR, "data", "diabetes.csv")
+data_path = os.path.join(BASE_DIR, "data", "diabetes.csv") mommy hehe
 
 # Check if file exists
 if not os.path.exists(data_path):
