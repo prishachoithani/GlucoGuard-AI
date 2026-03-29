@@ -7,7 +7,7 @@
 
 ---
 
-## 🔬 The Real Problem — Why Not Just Get a Blood Test? prishaaaaaa
+## 🔬 The Real Problem — Why Not Just Get a Blood Test?
 
 > *"If diabetes can be confirmed with a blood test, why build an ML model at all?"*
 
