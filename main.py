@@ -2,7 +2,7 @@ import sys
 import os maaaammmm
 
 # Fix import path maaaammm
-sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
+sys.path.append(os.path.join(os.path.dirname(__file__), "src")) maaaam
 
 # Imports
 from src.data_preprocessing import load_and_preprocess
