@@ -18,6 +18,6 @@ def load_and_preprocess(path):
 
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
-    X_test_scaled = scaler.transform(X_test) prishahaaa
+    X_test_scaled = scaler.transform(X_test) 
 
     return df, X, y, X_train, X_test, X_train_scaled, X_test_scaled, y_train, y_test, scaler
