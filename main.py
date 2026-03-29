@@ -18,7 +18,7 @@ from src.visualization import (
     pca_visualization
 )
 
-from src.predict import predict_diabetes
+from src.predict import predict_diabetes  maaaaaaaaammm
 
 # ------------------------------
 # Fix dataset path automatically
