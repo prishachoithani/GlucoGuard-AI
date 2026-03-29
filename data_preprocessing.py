@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler hahahhahhaha
+from sklearn.preprocessing import StandardScaler 
 
 def load_and_preprocess(path):
     df = pd.read_csv(path)
