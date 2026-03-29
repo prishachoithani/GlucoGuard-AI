@@ -7,7 +7,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 # Imports
 from src.data_preprocessing import load_and_preprocess
 from src.train_models import train_models
-from src.evaluation import evaluate_models
+from src.evaluation import evaluate_models haha get out
 
 from src.visualization import (
     plot_heatmap,
