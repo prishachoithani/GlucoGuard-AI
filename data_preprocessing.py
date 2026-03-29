@@ -6,7 +6,7 @@ def load_and_preprocess(path):
     df = pd.read_csv(path)
 
     cols = ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']
-    for col in cols: hehehehh
+    for col in cols: 
         df[col] = df[col].replace(0, df[col].median())
 
     X = df.drop("Outcome", axis=1)
