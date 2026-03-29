@@ -1,7 +1,7 @@
 import sys
 import os
 
-# Fix import path maaaammm
+# Fix import path
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 
 # Imports
