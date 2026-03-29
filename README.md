@@ -41,11 +41,11 @@ A machine learning model running on a ₹0 input form can flag high-risk individ
 
 ### Terminal Output — Model Accuracy Reports
 
-![Terminal Output 1](images/terminal1.png)
+<img width="665" height="638" alt="terminal1" src="https://github.com/user-attachments/assets/13762303-7d3e-41c6-806a-e1ed790ae4c1" />
 
 The classification report shows results for all three models. Decision Tree leads with **78.57% accuracy**, followed by Logistic Regression at **76.62%** and KNN at **75.32%**. Precision and recall are reported separately for each class — recall on the diabetic class (class 1) is the more important metric in a healthcare screening context.
 
-![Terminal Output 2](images/terminal2.png)
+<img width="880" height="132" alt="terminal2" src="https://github.com/user-attachments/assets/4a71f94f-ccff-42df-86d3-23ec916997a6" />
 
 Final prediction output confirms the model correctly identifies diabetic risk from a sample input, with the program completing successfully and all outputs saved.
 
@@ -53,7 +53,7 @@ Final prediction output confirms the model correctly identifies diabetic risk fr
 
 ### Correlation Heatmap
 
-![Correlation Heatmap](images/heatmap.png)
+<img width="640" height="480" alt="heatmap" src="https://github.com/user-attachments/assets/56c2e01a-be94-47d2-89b5-95ccfa7b1e2d" />
 
 Shows the correlation between all 8 features and the target variable `Outcome`. **Glucose (0.49)** and **BMI (0.31)** are the strongest predictors of diabetes. Age and Pregnancies also show meaningful correlation. BloodPressure and SkinThickness are the weakest, which is confirmed later by feature importance.
 
@@ -61,7 +61,7 @@ Shows the correlation between all 8 features and the target variable `Outcome`. 
 
 ### Model Comparison
 
-![Model Comparison](images/model_comparison.png)
+<img width="640" height="480" alt="model_comparison" src="https://github.com/user-attachments/assets/1f26d76b-fc7b-479f-8e93-795403bb3388" />
 
 Bar chart comparing test accuracy across all three classifiers. Decision Tree achieves the highest accuracy at ~0.79, demonstrating that non-linear decision boundaries are better suited to this dataset than the linear boundary used by Logistic Regression.
 
@@ -69,7 +69,7 @@ Bar chart comparing test accuracy across all three classifiers. Decision Tree ac
 
 ### KNN Hyperparameter Tuning — Error vs K
 
-![KNN Tuning](images/knn_plot.png)
+<img width="640" height="480" alt="knn_plot" src="https://github.com/user-attachments/assets/95c4d1f0-33cc-48c5-a475-2842c8cc3d99" />
 
 Sweeping k from 1 to 19 reveals the **bias-variance tradeoff** in action. At low k (k=1), the model overfits — error is high on unseen data. As k increases, error generally decreases and stabilises. This plot was used to select the optimal k value for the final KNN model.
 
@@ -77,7 +77,7 @@ Sweeping k from 1 to 19 reveals the **bias-variance tradeoff** in action. At low
 
 ### Decision Tree Overfitting Analysis
 
-![Overfitting Analysis](images/overfitting.png)
+<img width="640" height="480" alt="overfitting" src="https://github.com/user-attachments/assets/6fb8106e-8311-4c97-a203-33498973cc23" />
 
 This learning curve clearly shows the classic overfitting pattern — **train accuracy (blue) climbs toward 95%** as tree depth increases, while **test accuracy (orange) plateaus around 77–79%** and becomes unstable. This is precisely the bias-variance tradeoff: an unconstrained tree memorises training data but fails to generalise. A depth-limited tree is used in the final model to control this.
 
@@ -85,7 +85,7 @@ This learning curve clearly shows the classic overfitting pattern — **train ac
 
 ### Feature Importance
 
-![Feature Importance](images/feature_importance.png)
+<img width="640" height="480" alt="feature_importance" src="https://github.com/user-attachments/assets/700f4ed2-8e3b-4166-b29f-4af4cbed6d82" />
 
 **Glucose dominates with an importance score of ~0.51** — nearly 3× higher than the next feature. BMI (~0.20) and Age (~0.16) are the second and third most important predictors. DiabetesPedigreeFunction contributes moderately. Pregnancies, BloodPressure, SkinThickness, and Insulin contribute minimally. This matches established clinical knowledge — blood glucose is the primary biomarker of diabetes.
 
@@ -93,7 +93,7 @@ This learning curve clearly shows the classic overfitting pattern — **train ac
 
 ### PCA Visualisation
 
-![PCA Visualisation](images/pca.png)
+<img width="640" height="480" alt="pca" src="https://github.com/user-attachments/assets/ff611b01-30fd-4f2d-9e89-12606e4b0819" />
 
 All 8 features are compressed into 2 principal components and plotted. **Purple = No Diabetes, Yellow = Diabetes.** The two classes show partial separation, confirming that the features contain learnable signal even in 2D. The spread of yellow points into higher PC1 values suggests that the diabetic class has distinct variance patterns that the classifiers can exploit.
 
