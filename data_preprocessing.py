@@ -10,7 +10,7 @@ def load_and_preprocess(path):
         df[col] = df[col].replace(0, df[col].median())
 
     X = df.drop("Outcome", axis=1)
-    y = df["Outcome"] kushq
+    y = df["Outcome"]
 
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42
