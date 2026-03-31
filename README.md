@@ -26,53 +26,6 @@ This is a **triage tool**, not a diagnostic tool. The difference is everything.
 
 The real power is in the **pre-diabetic window**. Type 2 diabetes develops over years through a reversible pre-diabetic stage. Caught in this window, the condition can be reversed entirely through lifestyle changes. Caught after symptoms appear, it cannot. A machine learning model can flag high-risk individuals years before a blood test would ever be ordered. That is what makes this project matter.
 
-## Results and Outputs
-
-### Terminal Output — Model Accuracy Reports
-
-<img width="665" height="638" alt="terminal1" src="https://github.com/user-attachments/assets/13762303-7d3e-41c6-806a-e1ed790ae4c1" />
-
-The classification report shows results for all three models. Decision Tree leads with **78.57% accuracy**, followed by Logistic Regression at **76.62%** and KNN at **75.32%**. Recall on the diabetic class (class 1) is the more important metric in a healthcare screening context.
-
-<img width="880" height="132" alt="terminal2" src="https://github.com/user-attachments/assets/4a71f94f-ccff-42df-86d3-23ec916997a6" />
-
-Final prediction output confirms the model correctly identifies diabetic risk from a sample input, with all outputs saved.
-
-### Correlation Heatmap
-
-<img width="640" height="480" alt="heatmap" src="https://github.com/user-attachments/assets/56c2e01a-be94-47d2-89b5-95ccfa7b1e2d" />
-
-**Glucose (0.49)** and **BMI (0.31)** are the strongest predictors of diabetes. BloodPressure and SkinThickness are the weakest, confirmed later by feature importance.
-
-### Model Comparison
-
-<img width="640" height="480" alt="model_comparison" src="https://github.com/user-attachments/assets/1f26d76b-fc7b-479f-8e93-795403bb3388" />
-
-Decision Tree achieves the highest accuracy at ~0.79, showing that non-linear decision boundaries suit this dataset better than the linear boundary of Logistic Regression.
-
-### KNN Hyperparameter Tuning — Error vs K
-
-<img width="640" height="480" alt="knn_plot" src="https://github.com/user-attachments/assets/95c4d1f0-33cc-48c5-a475-2842c8cc3d99" />
-
-At low k (k=1), the model overfits — error is high on unseen data. As k increases, error decreases and stabilises. This plot was used to select the optimal k value.
-
-### Decision Tree Overfitting Analysis
-
-<img width="640" height="480" alt="overfitting" src="https://github.com/user-attachments/assets/6fb8106e-8311-4c97-a203-33498973cc23" />
-
-Train accuracy (blue) climbs toward 95% as depth increases, while test accuracy (orange) plateaus around 77-79% and becomes unstable — the bias-variance tradeoff in practice.
-
-### Feature Importance
-
-<img width="640" height="480" alt="feature_importance" src="https://github.com/user-attachments/assets/700f4ed2-8e3b-4166-b29f-4af4cbed6d82" />
-
-**Glucose dominates at ~0.51** — nearly 3x higher than the next feature. BMI (~0.20) and Age (~0.16) follow. This matches clinical knowledge — blood glucose is the primary biomarker of diabetes.
-
-### PCA Visualisation
-
-<img width="640" height="480" alt="pca" src="https://github.com/user-attachments/assets/ff611b01-30fd-4f2d-9e89-12606e4b0819" />
-
-8 features compressed to 2 principal components. Purple = No Diabetes, Yellow = Diabetes. The partial separation confirms the features contain learnable signal even in 2D.
 
 ## Project Structure
 
@@ -153,6 +106,54 @@ Sample Prediction: Diabetic Risk
 
 DONE! Check 'images' folder and results.txt
 ```
+## Results and Outputs
+
+### Terminal Output — Model Accuracy Reports
+
+<img width="665" height="638" alt="terminal1" src="https://github.com/user-attachments/assets/13762303-7d3e-41c6-806a-e1ed790ae4c1" />
+
+The classification report shows results for all three models. Decision Tree leads with **78.57% accuracy**, followed by Logistic Regression at **76.62%** and KNN at **75.32%**. Recall on the diabetic class (class 1) is the more important metric in a healthcare screening context.
+
+<img width="880" height="132" alt="terminal2" src="https://github.com/user-attachments/assets/4a71f94f-ccff-42df-86d3-23ec916997a6" />
+
+Final prediction output confirms the model correctly identifies diabetic risk from a sample input, with all outputs saved.
+
+### Correlation Heatmap
+
+<img width="640" height="480" alt="heatmap" src="https://github.com/user-attachments/assets/56c2e01a-be94-47d2-89b5-95ccfa7b1e2d" />
+
+**Glucose (0.49)** and **BMI (0.31)** are the strongest predictors of diabetes. BloodPressure and SkinThickness are the weakest, confirmed later by feature importance.
+
+### Model Comparison
+
+<img width="640" height="480" alt="model_comparison" src="https://github.com/user-attachments/assets/1f26d76b-fc7b-479f-8e93-795403bb3388" />
+
+Decision Tree achieves the highest accuracy at ~0.79, showing that non-linear decision boundaries suit this dataset better than the linear boundary of Logistic Regression.
+
+### KNN Hyperparameter Tuning — Error vs K
+
+<img width="640" height="480" alt="knn_plot" src="https://github.com/user-attachments/assets/95c4d1f0-33cc-48c5-a475-2842c8cc3d99" />
+
+At low k (k=1), the model overfits — error is high on unseen data. As k increases, error decreases and stabilises. This plot was used to select the optimal k value.
+
+### Decision Tree Overfitting Analysis
+
+<img width="640" height="480" alt="overfitting" src="https://github.com/user-attachments/assets/6fb8106e-8311-4c97-a203-33498973cc23" />
+
+Train accuracy (blue) climbs toward 95% as depth increases, while test accuracy (orange) plateaus around 77-79% and becomes unstable — the bias-variance tradeoff in practice.
+
+### Feature Importance
+
+<img width="640" height="480" alt="feature_importance" src="https://github.com/user-attachments/assets/700f4ed2-8e3b-4166-b29f-4af4cbed6d82" />
+
+**Glucose dominates at ~0.51** — nearly 3x higher than the next feature. BMI (~0.20) and Age (~0.16) follow. This matches clinical knowledge — blood glucose is the primary biomarker of diabetes.
+
+### PCA Visualisation
+
+<img width="640" height="480" alt="pca" src="https://github.com/user-attachments/assets/ff611b01-30fd-4f2d-9e89-12606e4b0819" />
+
+8 features compressed to 2 principal components. Purple = No Diabetes, Yellow = Diabetes. The partial separation confirms the features contain learnable signal even in 2D.
+
 
 ## Models and Why Each Was Chosen
 
